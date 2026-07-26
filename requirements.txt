@@ -1,0 +1,8 @@
+scikit-learn>=1.4
+numpy>=1.26
+python-dotenv>=1.0
+flask>=3.0
+
+# Optional — only required if you enable LLM fallback in src/llm_fallback.py
+# openai>=1.30
+# anthropic>=0.34

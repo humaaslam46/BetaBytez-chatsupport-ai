@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BetaBytez Support</title>
+  <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="app">
+    <aside class="rail">
+      <div class="rail-top">
+        <img class="rail-logo" src="{{ url_for('static', filename='logo.png') }}" alt="BetaBytez logo" />
+        <div class="rail-brand">
+          <span class="rail-name">BETABYTEZ</span>
+          <span class="rail-tagline">crafting digital magic</span>
+        </div>
+      </div>
+
+      <div class="rail-section">
+        <span class="rail-label">// first-line support</span>
+        <p class="rail-copy">
+          Automated answers for services, pricing, timelines &amp; onboarding.
+          Anything outside that gets routed to a human — no automated
+          guessing on things that matter.
+        </p>
+      </div>
+
+      <div class="rail-section">
+        <span class="rail-label">// try asking</span>
+        <div class="chips" id="suggestion-chips">
+          <button class="chip" data-q="What services do you offer?">What services do you offer?</button>
+          <button class="chip" data-q="How much does a project cost?">How much does a project cost?</button>
+          <button class="chip" data-q="How long does a project take?">How long does a project take?</button>
+          <button class="chip" data-q="How do I get started?">How do I get started?</button>
+          <button class="chip" data-q="I want to talk to a human">I want to talk to a human</button>
+        </div>
+      </div>
+
+      <button class="reset-btn" id="reset-btn">↺ Reset conversation</button>
+    </aside>
+
+    <main class="chat-pane">
+      <header class="chat-header">
+        <div class="status-dot" aria-hidden="true"></div>
+        <span>Support Assistant</span>
+        <span class="header-sub">— rules + NLP hybrid, escalates to a human when it should</span>
+      </header>
+
+      <div class="messages" id="messages">
+        <div class="msg bot">
+          <div class="msg-bubble">{{ greeting }}</div>
+        </div>
+      </div>
+
+      <form class="composer" id="composer" autocomplete="off">
+        <input
+          type="text"
+          id="message-input"
+          placeholder="Ask about services, pricing, timelines…"
+          aria-label="Type your message"
+        />
+        <button type="submit" id="send-btn" aria-label="Send">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12L21 3L14 21L11 13L3 12Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

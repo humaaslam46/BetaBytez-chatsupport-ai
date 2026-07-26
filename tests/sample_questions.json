@@ -1,0 +1,14 @@
+[
+  {"question": "What services do you guys offer?", "expected_intent": "services_overview"},
+  {"question": "Can you build me an AI chatbot for my website?", "expected_intent": "ai_systems"},
+  {"question": "Do you build websites using Next.js?", "expected_intent": "web_dev"},
+  {"question": "Can you deploy my app on AWS?", "expected_intent": "cloud_hosting"},
+  {"question": "How much would a small MVP cost?", "expected_intent": "pricing"},
+  {"question": "What's included in the Enterprise plan?", "expected_intent": "pricing_startup_vs_enterprise"},
+  {"question": "How long will my project take to finish?", "expected_intent": "timeline"},
+  {"question": "How do I get started working with you?", "expected_intent": "getting_started"},
+  {"question": "Where is your company located?", "expected_intent": "location"},
+  {"question": "Do you have a WhatsApp number I can message?", "expected_intent": "contact_channels"},
+  {"question": "I'd like to talk to a real human please", "expected_intent": "ESCALATE"},
+  {"question": "This is unacceptable, my project is late and nobody is replying, I want a refund", "expected_intent": "ESCALATE"}
+]
